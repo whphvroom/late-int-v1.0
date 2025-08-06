@@ -1,8 +1,12 @@
 ### `README_DEV.md` — Developer Commands for `late-int-v1.0`
 
-This doc lists common commands used during development of **Late Internal v1.0**.
+For developers contributing to **Late Internal v1.0**.
 
 ---
+
+### Basics 
+
+--- 
 
 #### Setup & Installation
 
@@ -14,19 +18,6 @@ conda activate late-int
 # Install backend dependencies
 pip install -r backend/requirements.txt
 ```
-
----
-
-#### Run the API Server (FastAPI + Uvicorn)
-
-```bash
-# From project root
-cd backend
-uvicorn app.main:app --reload
-```
-
-- Runs locally at: http://127.0.0.1:8000  
-- Swagger docs: http://127.0.0.1:8000/docs
 
 ---
 
@@ -58,9 +49,10 @@ git push origin main      # Push your committed changes to GitHub
 ```
 ---
 
-## Reminders & Good Practices
+### Reminders
 
-### Always pull before pushing
+--- 
+#### Always pull before pushing
 Keep your local branch in sync with the remote:
 ```bash
 git pull origin main
@@ -87,5 +79,46 @@ pip freeze > backend/requirements.txt
 
 ---
 
-#### Testing (TBD)
-> Placeholder — add testing commands as testing infra is added.
+### Testing 
+
+---
+
+#### Manual Sanity Checks 
+
+You can quickly check all backend functionality using the built-in Swagger UI provided by FastAPI:
+
+```bash
+cd backend
+uvicorn app.main:app --reload
+``` 
+Then open up the browser and go to: 
+http://127.0.0.1:8000/docs
+
+This opens Swagger UI where you can interact with the endpoints
+
+---
+
+### Repo Structure 
+
+--- 
+
+#### Backend 
+
+backend/
+├── app/
+│   ├── main.py                  # App entry point
+│   ├── routes/
+│   │   └── chat.py              # All /chat, /save, /review endpoints
+│   ├── services/
+│   │   ├── base_model.py        # Abstract interface: BaseModelClient
+│   │   ├── openai_client.py     # OpenAI model client
+│   │   └── model_router.py      # Chooses which model client to use
+│   ├── schemas/
+│   │   └── schemas.py           # Pydantic models for request/response
+│   └── utils/
+│       └── persistence.py       # Save/load JSON Q&A to disk
+├── .env                         # API keys
+├── requirements.txt             # Python dependencies
+└── saved.json                   # Local store of saved Q&As (could move later)
+
+--- 
