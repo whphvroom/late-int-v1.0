@@ -8,7 +8,15 @@ This version includes:
 - **Save & Review Mode** — Bookmark key answers for future review.
 - **Speed Mode** — A bare bones rapid-response mode designed for cramming.
 
-> `int` stands for internal — this version is focused on rapid iteration and validation. A future public version may differ.
+> `int` stands for internal. This version is focused on iteration, experimentation, and validation. A future public version will be released that's more streamlined for production usage. 
+
+## Project Docs 
+
+Product Blueprint 
+
+Design Board 
+
+Engineering Spec 
 
 ## Tech Stack
 
