@@ -104,6 +104,7 @@ This opens Swagger UI where you can interact with the endpoints
 
 #### Backend 
 
+``` 
 backend/
 ├── app/
 │   ├── main.py                  # App entry point
@@ -120,5 +121,6 @@ backend/
 ├── .env                         # API keys
 ├── requirements.txt             # Python dependencies
 └── saved.json                   # Local store of saved Q&As (could move later)
+``` 
 
 --- 
