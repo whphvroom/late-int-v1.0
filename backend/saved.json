@@ -1,10 +1,10 @@
 [
   {
-    "question": "What is the capital of france?",
-    "answer": "paris"
+    "question": "what is 2 + 3",
+    "answer": "2 + 3 equals 5."
   },
   {
-    "question": "What is the capital of france?",
-    "answer": "paris"
+    "question": "what is 2 + 6",
+    "answer": "2 + 6 equals 8."
   }
 ]

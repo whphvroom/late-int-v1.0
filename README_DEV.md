@@ -8,6 +8,28 @@ For developers contributing to **Late Internal v1.0**.
 
 --- 
 
+#### To Start Dev
+
+Open two terminals 
+
+```
+conda activate late-int
+```
+
+For frontend 
+
+```
+(late-int) weijichen@Weijis-MBP frontend % npm run dev
+```
+
+For backend 
+
+```
+(late-int) (base) weijichen@Weijis-MacBook-Pro backend % uvicorn app.main:app --reload
+```
+
+---
+
 #### Setup & Installation
 
 ```bash
@@ -101,6 +123,12 @@ This opens Swagger UI where you can interact with the endpoints
 ### Repo Structure 
 
 --- 
+
+#### Frontend 
+
+
+
+
 
 #### Backend 
 
